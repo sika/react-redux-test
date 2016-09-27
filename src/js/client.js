@@ -11,7 +11,6 @@ import AddUsers from "./pages/AddUsers";
 import SearchUsers from "./pages/SearchUsers";
 
 const app = document.getElementById('app');
-
 ReactDOM.render(
   <Provider store={store}>
   {/* browserHistory remembers address URLs and parses them into location object */}
