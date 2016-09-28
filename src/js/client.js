@@ -16,7 +16,9 @@ console.log("store", store.getState());
 
 ReactDOM.render(
   <Provider store={store}>
-  {/* hashHistory remembers address URLs and parses them into location object */}
+  {/* hashHistory remembers address URLs and parses them into location object.
+    Can be used without server config. browserHistory is otherwise recommended for cleaner URLs.
+    */}
     <Router history={hashHistory}>
       <Route path="/" component={Layout}>
         <IndexRoute component={SeeUsers}></IndexRoute>
