@@ -8,7 +8,7 @@ export default class Layout extends React.Component{
 
 
   render(){
-    console.log("Layout props", this.props);
+    // console.log("Layout props", this.props);
     const {location} = this.props;
     return(
       <div>
