@@ -21,3 +21,10 @@ export function setUserAge(age) {
     payload: age,
   }
 }
+
+export function setUserProp(userProp) {
+  return {
+    type: 'SET_USER_PROP',
+    payload: userProp,
+  }
+}

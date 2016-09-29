@@ -5,19 +5,35 @@ import {fetchUser} from "../actions/userActions";
 
 class SeeUsers extends React.Component{
 
-  // componentWillMount(){
-  //   console.log("cWM props", this.props);
-  //   this.props.dispatch(fetchUser())
-  // }
+  //
+//  const userTable = user.map()
+
 
   render(){
-    console.log("this props",this.props);
+    console.log("this props",this.props.user);
+    const {user} = this.props;
+    const userTable = user.map((user, i)=>{
+      return(
+      <tr key={ i }>
+        <td>
+          {user.name}
+        </td>
+        <td>
+          {user.age}
+        </td>
+      </tr>)
+    })
+    console.log("usertable", userTable);
     return(
       <div>
         <h3>See Users</h3>
         <button onClick={this.props.fetchShit}>Fetch users</button>
         <br/>
-        User: {this.props.user.name}
+        <table>
+          <tbody>
+            {userTable}
+          </tbody>
+        </table>
       </div>
     )
   }
