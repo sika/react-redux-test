@@ -21,7 +21,7 @@ class AddUsers extends React.Component{
   render(){
     return(
       <div>
-        <UserForm onSubmit={ this.handleInput.bind(this) }/>
+        <UserForm something={ this.handleInput.bind(this) }/>
       </div>
     )
   }

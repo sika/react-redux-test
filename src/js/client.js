@@ -7,6 +7,8 @@ import Layout from "./components/Layout";
 import store from "./store";
 
 import SeeUsers from "./pages/SeeUsers";
+import SeeTweets from "./pages/SeeTweets";
+import AddTweets from "./pages/AddTweets";
 import AddUsers from "./pages/AddUsers";
 import SearchUsers from "./pages/SearchUsers";
 
@@ -23,6 +25,8 @@ ReactDOM.render(
       <Route path="/" component={Layout}>
         <IndexRoute component={SeeUsers}></IndexRoute>
         <Route path="add-users" component={AddUsers}></Route>
+        <Route path="see-tweets" component={SeeTweets}></Route>
+        <Route path="add-tweets" component={AddTweets}></Route>
         <Route path="search-users" component={SearchUsers}></Route>
       </Route>
     </Router>
