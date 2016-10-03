@@ -1,5 +1,3 @@
-//import axios from "axios";
-
 export function fetchTweets() {
   return function(dispatch) {
     // fetch("http://rest.learncode.academy/api/test123/tweets")
@@ -7,7 +5,7 @@ export function fetchTweets() {
       .then(response => response.json())
       .then((response) => {
         // console.log(response.data);
-        console.log(response);
+        console.log("tweets fetch success: ", response);
         dispatch({type: "FETCH_TWEETS_FULFILLED", payload: response})
       })
       .catch((err) => {
@@ -18,7 +16,7 @@ export function fetchTweets() {
 }
 
 export function addTweet(tweet) {
-    console.log(tweet);
+    console.log("addTweet", tweet);
   return function(dispatch) {
     fetch('https://testdata-11cab.firebaseio.com/tweets.json', {
         method: "POST",

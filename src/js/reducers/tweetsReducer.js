@@ -1,3 +1,7 @@
+function objectToArray(object) {
+  return Object.keys(object).map(key => object[key]);
+}
+
 export default function reducer(state={
     tweets: [],
     fetching: false,
@@ -17,7 +21,7 @@ export default function reducer(state={
           ...state,
           fetching: false,
           fetched: true,
-          tweets: action.payload,
+          tweets: objectToArray(action.payload),
         }
       }
       case "ADD_TWEET": {
